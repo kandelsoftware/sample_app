@@ -10,9 +10,10 @@ gem 'jquery-rails', '2.0.2'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'guard','1.1.0'
   gem 'rspec-rails', '2.11.0'
-  #gem 'guard-rspec', '1.2.1'
-  #gem 'guard-spork', '1.2.0'  
+  gem 'guard-rspec', '1.2.1'
+  gem 'guard-spork', '1.2.0'  
   gem 'spork', '0.9.2'
 end
 
@@ -33,6 +34,7 @@ group :test do
   # gem 'rb-fsevent', '0.9.1', :require => false
   # gem 'growl', '1.0.3'
 end
+ENV['RUBY_DEP_GEM_SILENCE_WARNINGS'] = '1'
 
 group :production do
   gem 'pg'
